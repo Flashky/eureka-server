@@ -2,19 +2,23 @@ eureka-server
 
 ## Docker build
 
-Execute at least once:
+**Note:** *These steps are only needed if you want to manually build your own image.*
 
-```
-mvn clean package
-```
+Execute the following commands to generate your own image:
 
-Build the image
+```sh
+# Build the java project
+mvn clean package 
 
-```
+# Build the docker image
 docker build --tag eureka-server:latest .
 ```
 
-## Execution via Docker
+
+Done! You can run your your container now.
+
+
+## Run via Docker
 
 Basic execution command:
 

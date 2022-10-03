@@ -22,8 +22,37 @@ The minimum configuration requires adding the following to the ``pom.xml``:
 
 Properties:
 
-``TODO``
+```xml
+<spring-cloud.version>2021.0.4</spring-cloud.version>
+```
 
 Dependencies:
 
-``TODO``
+```xml
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-dependencies</artifactId>
+	<version>${spring-cloud.version}</version>
+	<type>pom</type>
+	<scope>import</scope>
+</dependency>
+```
+
+#### Properties
+
+The minimum configuration requires just adding the following properties at ``application.yml`:
+
+```yml
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://admin:amin@localhost:8761/eureka/
+```
+
+Specially ``eureka.client.serviceUrl.defaultZone`` must match the exact ``defaultZone`` from the server.

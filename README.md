@@ -8,6 +8,8 @@ Before running the service, you will need to customize several properties or env
 
 Property | Description | Default value
 --|--|--
+EUREKA_SERVER_USERNAME | Username to login at the Eureka server | ``admin`` **(*)**
+EUREKA_SERVER_PASSWORD | Password to login at the Eureka server | ``admin`` **(*)**
 
 
 ***:** *It is highly recommended to change both default username and password.*
